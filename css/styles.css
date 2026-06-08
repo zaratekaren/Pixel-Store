@@ -1175,3 +1175,80 @@ h1 span {
     right: 0;
   }
 }
+
+/* ==========================================================================
+   ESTILOS RESPONSIVOS PARA LA PÁGINA DE PRODUCTOS 
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  /* LAYOUT DE PRODUCTOS - Cambia de fila a columna */
+  .productos-layout {
+    flex-direction: column;
+  }
+
+  /* EL SIDEBAR PASA A OCUPAR EL ANCHO COMPLETO */
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 1.5rem 2rem;
+    display: grid;
+    /* Distribuimos los grupos de filtros en columnas para aprovechar el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .sidebar-grupo {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* HEADER DE PRODUCTOS */
+  .productos-header {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .productos-header-texto h1 {
+    font-size: 28px;
+  }
+
+  /* BARRA DE BÚSQUEDA */
+  #buscador {
+    width: 100%; /* Toma todo el ancho en mobile */
+    max-width: 400px;
+  }
+
+  /* SIDEBAR EN TILES (Para pantallas más compactas) */
+  .sidebar {
+    grid-template-columns: 1fr; /* Volvemos a una columna si el espacio es muy chico */
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  /* CONTENIDO DE PRODUCTOS */
+  .productos-contenido {
+    padding: 1.5rem;
+  }
+
+  /* GRILLA A 2 COLUMNAS EN MOBILE */
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* GRILLA A 1 COLUMNA EN CELULARES MUY CHICOS */
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .prod-imagen {
+    height: 160px; /* Le damos un toque más de aire al emoji del producto */
+  }
+}
