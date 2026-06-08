@@ -989,3 +989,189 @@ h1 span {
 .banner-envio strong {
   font-weight: 700;
 }
+
+/* ==========================================================================
+   ESTILOS RESPONSIVOS (MOBILE & TABLET) - SIN TOCAR LÓGICA
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  /* BANNER OFERTAS - Se adapta a tablets */
+  .oferta-banner {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .oferta-izquierda {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* LAYOUTS DE PÁGINAS INTERNAS */
+  .productos-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 1.5rem;
+  }
+
+  .contacto-layout,
+  .carrito-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-form,
+  .carrito-lista {
+    border-right: none;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* NAVBAR - Distribución limpia en mobile */
+  .navbar {
+    padding: 0 1rem;
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 5px;
+  }
+
+  .nav-actions {
+    order: 2;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero-texto {
+    padding: 2.5rem 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-sub {
+    max-width: 100%;
+  }
+
+  .hero-botones {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-botones button {
+    width: 100%;
+  }
+
+  .hero-imagen {
+    width: 100%;
+    min-height: 280px;
+    border-left: none;
+    border-top: 1px solid var(--gris-borde);
+    padding: 2rem 0;
+  }
+
+  /* SECCIONES Y GRIDS (Categorías y Productos) */
+  .categorias, .productos {
+    padding: 1.5rem;
+  }
+
+  .cats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* HEADERS DE PÁGINAS SEGUNDARIAS */
+  .productos-header,
+  .ofertas-hero,
+  .contacto-header,
+  .carrito-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  #buscador {
+    width: 100%;
+  }
+
+  /* OFERTAS HERO (PÁGINA OFERTAS) */
+  .ofertas-hero-texto {
+    align-items: center;
+  }
+
+  /* FILTROS (Desplazamiento horizontal en mobile para que no se amontonen) */
+  .ofertas-filtros {
+    padding: 1rem 1.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filtro-btn {
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* GRID DE PRODUCTOS A 1 COLUMNA EN PANTALLAS MUY CHICAS */
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* AJUSTES EN EL CARRITO */
+  .carrito-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    padding: 1.5rem 0;
+  }
+
+  .item-derecha {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-eliminar {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+  }
+}
