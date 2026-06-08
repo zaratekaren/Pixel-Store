@@ -1252,3 +1252,63 @@ h1 span {
     height: 160px; /* Le damos un toque más de aire al emoji del producto */
   }
 }
+
+/* ==========================================================================
+   ESTILOS RESPONSIVOS PARA LA PÁGINA DE OFERTAS 
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* HERO DE OFERTAS */
+  .ofertas-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .ofertas-hero-texto {
+    align-items: center;
+  }
+
+  .ofertas-hero-texto h1 {
+    font-size: 28px;
+  }
+
+  /* BARRA DE FILTROS FLUIDA (Scroll horizontal en mobile) */
+  .ofertas-filtros {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: flex-start; /* Evita que se centren y corten el scroll */
+    overflow-x: auto;            /* Habilita el scroll horizontal */
+    white-space: nowrap;         /* Fuerza a los botones a quedarse en una sola línea */
+    gap: 0.75rem;
+    -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+    scrollbar-width: none;       /* Oculta la barra de scroll en Firefox */
+  }
+
+  /* Oculta la barra de scroll en Chrome/Safari para que quede más estético */
+  .ofertas-filtros::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filtro-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 13px;
+    flex-shrink: 0; /* Evita que el botón se deforme o se achique */
+  }
+
+  /* GRILLA DE OFERTAS A 2 COLUMNAS */
+  .ofertas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* GRILLA A 1 COLUMNA EN PANTALLAS MUY CHICAS */
+  .ofertas-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
