@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelStore</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Pixel<span>Store</span></div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="ofertas.html">Ofertas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="location.href='carrito.html'">🛒 Carrito (0)</button>
+    </div>
+  </nav>
+
+  <!-- BANNER ENVIO -->
+<div class="banner-envio">
+  🚚 Envío gratis en compras mayores a <strong>$500</strong> — ¡Aprovechalo!
+</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-texto">
+      <p class="hero-tag">✦ Nuevo lanzamiento 2025</p>
+      <h1>La mejor tech,<br>al mejor <span>precio.</span></h1>
+      <p class="hero-sub">Celulares, cargadores, auriculares y más. Todo lo que necesitás, en un solo lugar.</p>
+      <div class="hero-botones">
+        <button class="btn-primary" onclick="location.href='productos.html'">Ver productos →</button>
+        <button class="btn-secondary" onclick="location.href='ofertas.html'">Ver ofertas</button>
+      </div>
+    </div>
+    <div class="hero-imagen">
+      <div class="telefono">
+        <p class="tel-modelo">iPhone 16 Pro</p>
+        <p class="tel-precio">$899</p>
+        <p class="tel-envio">Envío gratis</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER OFERTAS -->
+  <div class="oferta-banner">
+    <div class="oferta-izquierda">
+      <p class="oferta-pct">30% <span>OFF</span></p>
+      <div class="oferta-texto">
+        <p class="oferta-titulo">Oferta del día</p>
+        <p class="oferta-sub">En cargadores y accesorios seleccionados</p>
+      </div>
+    </div>
+    <div class="oferta-timer">
+      <div class="timer-bloque">
+        <p class="timer-num" id="horas">08</p>
+        <p class="timer-label">hs</p>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-bloque">
+        <p class="timer-num" id="minutos">24</p>
+        <p class="timer-label">min</p>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-bloque">
+        <p class="timer-num" id="segundos">00</p>
+        <p class="timer-label">seg</p>
+      </div>
+    </div>
+    <button class="btn-oferta" onclick="location.href='ofertas.html'">Ver ofertas →</button>
+  </div>
+
+  <!-- CATEGORIAS -->
+  <section class="categorias">
+    <div class="seccion-header">
+      <h2>Categorías</h2>
+      <a href="productos.html">Ver todas →</a>
+    </div>
+    <div class="cats-grid">
+      <div class="cat-card">
+        <div class="cat-icono">📱</div>
+        <p class="cat-nombre">Celulares</p>
+        <p class="cat-cantidad">142 productos</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icono">🔌</div>
+        <p class="cat-nombre">Cargadores</p>
+        <p class="cat-cantidad">87 productos</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icono">🎧</div>
+        <p class="cat-nombre">Auriculares</p>
+        <p class="cat-cantidad">63 productos</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icono">⌚</div>
+        <p class="cat-nombre">Smartwatches</p>
+        <p class="cat-cantidad">38 productos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS DESTACADOS -->
+  <section class="productos">
+    <div class="seccion-header">
+      <h2>Productos destacados</h2>
+      <a href="productos.html">Ver todos →</a>
+    </div>
+    <div class="productos-grid">
+
+      <div class="prod-card">
+        <div class="prod-imagen">
+          <span class="prod-badge">-15%</span>
+          <p class="prod-emoji">📱</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Apple</p>
+          <p class="prod-nombre">iPhone 16 Pro 256GB</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$899</span>
+              <span class="prod-viejo">$1.059</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('iPhone 16 Pro', 899)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-imagen">
+          <p class="prod-emoji">📱</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Samsung</p>
+          <p class="prod-nombre">Galaxy S25 Ultra 512GB</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$979</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('Galaxy S25 Ultra', 979)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-imagen">
+          <span class="prod-badge">-30%</span>
+          <p class="prod-emoji">🔌</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Anker</p>
+          <p class="prod-nombre">Cargador USB-C 65W GaN</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$34</span>
+              <span class="prod-viejo">$49</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('Cargador Anker', 34)">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Pixel<span>Store</span></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="ofertas.html">Ofertas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="#">Políticas</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 PixelStore</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

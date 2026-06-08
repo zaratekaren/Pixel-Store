@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos — PixelStore</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Pixel<span>Store</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="ofertas.html">Ofertas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="location.href='carrito.html'">🛒 Carrito (0)</button>
+    </div>
+  </nav>
+  <!-- BANNER ENVIO -->
+<div class="banner-envio">
+  🚚 Envío gratis en compras mayores a <strong>$500</strong> — ¡Aprovechalo!
+</div>
+
+
+  <!-- HEADER PRODUCTOS -->
+<section class="productos-header">
+  <div class="productos-header-texto">
+    <h1>Todos los <span>productos</span></h1>
+    <p class="hero-sub">Encontrá lo que necesitás entre toda nuestra línea de tecnología.</p>
+  </div>
+
+  <div class="productos-buscar">
+    <input type="text" id="buscador" placeholder="🔍 Buscar producto...">
+  </div>
+</section>
+
+<!-- FILTROS Y CONTENIDO -->
+<div class="productos-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-grupo">
+      <p class="sidebar-titulo">Categoría</p>
+      <ul class="sidebar-lista">
+        <li><a href="#" class="sidebar-link activo-link">Todos</a></li>
+        <li><a href="#" class="sidebar-link">Celulares</a></li>
+        <li><a href="#" class="sidebar-link">Cargadores</a></li>
+        <li><a href="#" class="sidebar-link">Auriculares</a></li>
+        <li><a href="#" class="sidebar-link">Smartwatches</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-grupo">
+      <p class="sidebar-titulo">Precio máximo</p>
+      <input type="range" id="precio-range" min="0" max="1000" value="1000">
+      <p class="precio-valor">Hasta: $<span id="precio-display">1000</span></p>
+    </div>
+
+    <div class="sidebar-grupo">
+      <p class="sidebar-titulo">Marca</p>
+      <ul class="sidebar-lista">
+        <li><label><input type="checkbox" checked> Apple</label></li>
+        <li><label><input type="checkbox" checked> Samsung</label></li>
+        <li><label><input type="checkbox" checked> Sony</label></li>
+        <li><label><input type="checkbox" checked> Anker</label></li>
+        <li><label><input type="checkbox" checked> Xiaomi</label></li>
+      </ul>
+    </div>
+
+  </aside>
+
+  <!-- GRILLA DE PRODUCTOS -->
+  <div class="productos-contenido">
+
+    <div class="productos-grid">
+
+      <div class="prod-card" data-categoria="celulares" data-precio="899" data-marca="apple">
+        <div class="prod-imagen">
+          <span class="prod-badge">-15%</span>
+          <p class="prod-emoji">📱</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Apple</p>
+          <p class="prod-nombre">iPhone 16 Pro 256GB</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$899</span>
+              <span class="prod-viejo">$1.059</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('iPhone 16 Pro', 899)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-categoria="celulares" data-precio="979" data-marca="samsung">
+        <div class="prod-imagen">
+          <p class="prod-emoji">📱</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Samsung</p>
+          <p class="prod-nombre">Galaxy S25 Ultra 512GB</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$979</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('Galaxy S25 Ultra', 979)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-categoria="cargadores" data-precio="34" data-marca="anker">
+        <div class="prod-imagen">
+          <span class="prod-badge">-30%</span>
+          <p class="prod-emoji">🔌</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Anker</p>
+          <p class="prod-nombre">Cargador USB-C 65W GaN</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$34</span>
+              <span class="prod-viejo">$49</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('Cargador Anker', 34)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-categoria="auriculares" data-precio="279" data-marca="sony">
+        <div class="prod-imagen">
+          <span class="prod-badge">-20%</span>
+          <p class="prod-emoji">🎧</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Sony</p>
+          <p class="prod-nombre">Auriculares WH-1000XM5</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$279</span>
+              <span class="prod-viejo">$349</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('Sony WH-1000XM5', 279)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-categoria="smartwatches" data-precio="224" data-marca="samsung">
+        <div class="prod-imagen">
+          <span class="prod-badge">-25%</span>
+          <p class="prod-emoji">⌚</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Samsung</p>
+          <p class="prod-nombre">Galaxy Watch 7</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$224</span>
+              <span class="prod-viejo">$299</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('Galaxy Watch 7', 224)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-categoria="celulares" data-precio="269" data-marca="xiaomi">
+        <div class="prod-imagen">
+          <span class="prod-badge">-10%</span>
+          <p class="prod-emoji">📱</p>
+        </div>
+        <div class="prod-info">
+          <p class="prod-marca">Xiaomi</p>
+          <p class="prod-nombre">Redmi Note 14 Pro</p>
+          <div class="prod-footer">
+            <div class="prod-precios">
+              <span class="prod-precio">$269</span>
+              <span class="prod-viejo">$299</span>
+            </div>
+            <button class="btn-agregar" onclick="agregarProducto('Redmi Note 14 Pro', 269)">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

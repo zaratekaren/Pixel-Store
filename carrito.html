@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito — PixelStore</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Pixel<span>Store</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="ofertas.html">Ofertas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="location.href='carrito.html'">🛒 Carrito (0)</button>
+    </div>
+  </nav>
+
+  <!-- BANNER ENVIO -->
+<div class="banner-envio">
+  🚚 Envío gratis en compras mayores a <strong>$500</strong> — ¡Aprovechalo!
+</div>
+
+  <!-- HEADER CARRITO -->
+<section class="carrito-header">
+  <h1>Tu <span>carrito</span></h1>
+  <p class="hero-sub">Revisá tus productos antes de confirmar.</p>
+</section>
+
+<!-- CONTENIDO CARRITO -->
+<div class="carrito-layout">
+
+  <!-- LISTA DE PRODUCTOS -->
+  <div class="carrito-lista">
+    <div class="carrito-vacio" id="carrito-vacio">
+      <p class="vacio-emoji">🛒</p>
+      <p class="vacio-texto">Tu carrito está vacío</p>
+      <button class="btn-primary" onclick="location.href='productos.html'">Ver productos →</button>
+    </div>
+
+    <div id="carrito-items"></div>
+  </div>
+
+  <!-- RESUMEN -->
+  <div class="carrito-resumen">
+    <h2 class="resumen-titulo">Resumen</h2>
+
+    <div class="resumen-linea">
+      <span>Subtotal</span>
+      <span id="resumen-subtotal">$0</span>
+    </div>
+
+    <div class="resumen-linea">
+  <span>Envío</span>
+  <span id="resumen-envio">Gratis</span>
+ </div>
+
+    <div class="resumen-linea resumen-total">
+      <span>Total</span>
+      <span id="resumen-total">$0</span>
+    </div>
+
+    <button class="btn-confirmar" onclick="confirmarCompra()">Confirmar compra →</button>
+    <button class="btn-secondary" onclick="location.href='productos.html'">Seguir comprando</button>
+  </div>
+
+</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

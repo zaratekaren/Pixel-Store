@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas — PixelStore</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR (igual al de index.html) -->
+  <nav class="navbar">
+    <div class="logo">Pixel<span>Store</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="ofertas.html">Ofertas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="location.href='carrito.html'">🛒 Carrito (0)</button>
+    </div>
+  </nav>
+
+  <!-- BANNER ENVIO -->
+<div class="banner-envio">
+  🚚 Envío gratis en compras mayores a <strong>$500</strong> — ¡Aprovechalo!
+</div>
+
+  <!-- HERO OFERTAS -->
+<section class="ofertas-hero">
+  <div class="ofertas-hero-texto">
+    <p class="hero-tag">🔥 Ofertas limitadas</p>
+    <h1>Los mejores <span>descuentos</span><br>del mes.</h1>
+    <p class="hero-sub">Aprovechá antes que se acaben. Stock limitado.</p>
+  </div>
+
+  <div class="ofertas-timer-grande">
+    <p class="timer-titulo">La oferta termina en:</p>
+    <div class="oferta-timer">
+      <div class="timer-bloque">
+        <p class="timer-num" id="horas">08</p>
+        <p class="timer-label">hs</p>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-bloque">
+        <p class="timer-num" id="minutos">24</p>
+        <p class="timer-label">min</p>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-bloque">
+        <p class="timer-num" id="segundos">00</p>
+        <p class="timer-label">seg</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTROS -->
+<section class="ofertas-filtros">
+  <button class="filtro-btn activo">Todos</button>
+  <button class="filtro-btn">Celulares</button>
+  <button class="filtro-btn">Cargadores</button>
+  <button class="filtro-btn">Auriculares</button>
+  <button class="filtro-btn">Smartwatches</button>
+</section>
+
+<!-- PRODUCTOS EN OFERTA -->
+<section class="productos">
+  <div class="productos-grid">
+
+    <div class="prod-card" data-categoria="celulares">
+      <div class="prod-imagen">
+        <span class="prod-badge">-15%</span>
+        <p class="prod-emoji">📱</p>
+      </div>
+      <div class="prod-info">
+        <p class="prod-marca">Apple</p>
+        <p class="prod-nombre">iPhone 16 Pro 256GB</p>
+        <div class="prod-footer">
+          <div class="prod-precios">
+            <span class="prod-precio">$899</span>
+            <span class="prod-viejo">$1.059</span>
+          </div>
+          <button class="btn-agregar" onclick="agregarProducto('iPhone 16 Pro', 899)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-categoria="cargadores">
+      <div class="prod-imagen">
+        <span class="prod-badge">-30%</span>
+        <p class="prod-emoji">🔌</p>
+      </div>
+      <div class="prod-info">
+        <p class="prod-marca">Anker</p>
+        <p class="prod-nombre">Cargador USB-C 65W GaN</p>
+        <div class="prod-footer">
+          <div class="prod-precios">
+            <span class="prod-precio">$34</span>
+            <span class="prod-viejo">$49</span>
+          </div>
+          <button class="btn-agregar" onclick="agregarProducto('Cargador Anker', 34)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-categoria="auriculares">
+      <div class="prod-imagen">
+        <span class="prod-badge">-20%</span>
+        <p class="prod-emoji">🎧</p>
+      </div>
+      <div class="prod-info">
+        <p class="prod-marca">Sony</p>
+        <p class="prod-nombre">Auriculares WH-1000XM5</p>
+        <div class="prod-footer">
+          <div class="prod-precios">
+            <span class="prod-precio">$279</span>
+            <span class="prod-viejo">$349</span>
+          </div>
+          <button class="btn-agregar" onclick="agregarProducto('Sony WH-1000XM5', 279)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-categoria="smartwatches">
+      <div class="prod-imagen">
+        <span class="prod-badge">-25%</span>
+        <p class="prod-emoji">⌚</p>
+      </div>
+      <div class="prod-info">
+        <p class="prod-marca">Samsung</p>
+        <p class="prod-nombre">Galaxy Watch 7</p>
+        <div class="prod-footer">
+          <div class="prod-precios">
+            <span class="prod-precio">$224</span>
+            <span class="prod-viejo">$299</span>
+          </div>
+          <button class="btn-agregar" onclick="agregarProducto('Galaxy Watch 7', 224)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-categoria="celulares">
+      <div class="prod-imagen">
+        <span class="prod-badge">-10%</span>
+        <p class="prod-emoji">📱</p>
+      </div>
+      <div class="prod-info">
+        <p class="prod-marca">Xiaomi</p>
+        <p class="prod-nombre">Redmi Note 14 Pro</p>
+        <div class="prod-footer">
+          <div class="prod-precios">
+            <span class="prod-precio">$269</span>
+            <span class="prod-viejo">$299</span>
+          </div>
+          <button class="btn-agregar" onclick="agregarProducto('Redmi Note 14 Pro', 269)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-categoria="cargadores">
+      <div class="prod-imagen">
+        <span class="prod-badge">-40%</span>
+        <p class="prod-emoji">🔌</p>
+      </div>
+      <div class="prod-info">
+        <p class="prod-marca">Baseus</p>
+        <p class="prod-nombre">Cable USB-C 100W x2</p>
+        <div class="prod-footer">
+          <div class="prod-precios">
+            <span class="prod-precio">$12</span>
+            <span class="prod-viejo">$20</span>
+          </div>
+          <button class="btn-agregar" onclick="agregarProducto('Cable Baseus', 12)">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

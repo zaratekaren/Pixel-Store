@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — PixelStore</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Pixel<span>Store</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="ofertas.html">Ofertas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="location.href='carrito.html'">🛒 Carrito (0)</button>
+    </div>
+  </nav>
+
+  <!-- BANNER ENVIO -->
+<div class="banner-envio">
+  🚚 Envío gratis en compras mayores a <strong>$500</strong> — ¡Aprovechalo!
+</div>
+
+  <!-- HEADER CONTACTO -->
+  <section class="contacto-header">
+    <p class="hero-tag">📩 Estamos para ayudarte</p>
+    <h1>Contactanos</h1>
+    <p class="hero-sub">Respondemos todos los mensajes en menos de 24 horas.</p>
+  </section>
+
+  <!-- CONTENIDO CONTACTO -->
+  <div class="contacto-layout">
+
+    <!-- FORMULARIO -->
+    <div class="contacto-form">
+      <h2 class="form-titulo">Envianos un mensaje</h2>
+
+      <div class="form-grupo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+      </div>
+
+      <div class="form-grupo">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Ej: juan@gmail.com">
+      </div>
+
+      <div class="form-grupo">
+        <label for="asunto">Asunto</label>
+        <select id="asunto">
+          <option value="">Seleccioná un asunto</option>
+          <option value="compra">Consulta sobre una compra</option>
+          <option value="envio">Consulta sobre envío</option>
+          <option value="producto">Consulta sobre un producto</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-grupo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="5" placeholder="Escribí tu consulta acá..."></textarea>
+      </div>
+
+      <button class="btn-enviar" onclick="enviarFormulario()">Enviar mensaje →</button>
+
+      <div class="form-exito" id="form-exito">
+        ✅ ¡Mensaje enviado! Te respondemos pronto.
+      </div>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="contacto-info">
+
+      <div class="info-card">
+        <div class="info-icono">📍</div>
+        <div>
+          <p class="info-titulo">Dirección</p>
+          <p class="info-texto">Av. Corrientes 1234, Buenos Aires</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icono">📞</div>
+        <div>
+          <p class="info-titulo">Teléfono</p>
+          <p class="info-texto">+54 11 1234-5678</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icono">📧</div>
+        <div>
+          <p class="info-titulo">Email</p>
+          <p class="info-texto">hola@pixelstore.com</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icono">🕐</div>
+        <div>
+          <p class="info-titulo">Horario</p>
+          <p class="info-texto">Lunes a Viernes, 9hs a 18hs</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
